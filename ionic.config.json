@@ -1,0 +1,7 @@
+{
+  "name": "FranFitness",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
