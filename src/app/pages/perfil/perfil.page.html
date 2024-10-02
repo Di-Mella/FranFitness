@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>PERFIL</ion-card-subtitle>
+      <ion-card-title>{{ user.name }}</ion-card-title>
+      <ion-label>Matricula: 11234              PLAN: Black</ion-label>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <app-user-overview></app-user-overview>
+    </ion-card-content>
+    
+    <ion-card-footer>
+      <ion-button expand="full" fill="clear" routerLink="/datos-personales">
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        Datos Personales
+      </ion-button>
+      <ion-button expand="full" fill="clear" routerLink="/documentos">
+        <ion-icon slot="start" name="document-text"></ion-icon>
+        Documentos
+      </ion-button>
+      <ion-button expand="full" fill="clear" [routerLink]="['/faq']">
+        <ion-icon slot="start" name="help-circle"></ion-icon>
+        Preguntas Frecuentes
+      </ion-button>
+    </ion-card-footer>
+  </ion-card>
+</ion-content>
+
+<app-layout></app-layout>

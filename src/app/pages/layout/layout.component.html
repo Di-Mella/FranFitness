@@ -1,0 +1,26 @@
+<p>
+  layout works!
+</p>
+<!-- layout.component.html -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" [routerLink]="['/dashboard']">
+      <ion-icon name="play-circle"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="radio" [routerLink]="['/videos']">
+      <ion-icon name="radio"></ion-icon>
+      <ion-label>Videos</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="library" [routerLink]="['/rutinas']">
+      <ion-icon name="library"></ion-icon>
+      <ion-label>Rutinas</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="search" [routerLink]="['/perfil']">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+<router-outlet></router-outlet>
