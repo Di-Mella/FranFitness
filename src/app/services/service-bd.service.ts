@@ -44,21 +44,6 @@ export class ServiceBDService {
   // Tabla rutina_ejercicios
   tablaRutinaEjercicios: string = "CREATE TABLE IF NOT EXISTS rutina_ejercicios (id INTEGER PRIMARY KEY AUTOINCREMENT, series INTEGER NOT NULL, repeticiones INTEGER NOT NULL, rutinas_id_rutina INTEGER NOT NULL, ejercicios_id_ejercicios INTEGER NOT NULL, tipo_rutina TEXT NOT NULL, FOREIGN KEY (rutinas_id_rutina) REFERENCES rutinas(id_rutina), FOREIGN KEY (ejercicios_id_ejercicios) REFERENCES ejercicios(id_ejercicios));";
   
-  //Preguntar si con esto debo crear una clase para cada tabla O si debo esperar a la funcion crear tablas
-  tablas: string[] = [
-    this.tablaGenero,
-    this.tablaRolUsuarios,
-    this.tablaGrupoMuscular,
-    this.tablaEjercicios,
-    this.tablaRutinas,
-    this.tablaUsuarios,
-    this.tablaPlanesMembresia,
-    this.tablaHistorialRutinas,
-    this.tablaSubscripcion,
-    this.tablaProgreso,
-    this.tablaRutinaEjercicios
-  ];
-
   // Variables para para realizar insert por defecto 
 
   //variable de observables para las consultas de base de datos
