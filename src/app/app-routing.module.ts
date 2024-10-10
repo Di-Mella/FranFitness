@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'ca',
     pathMatch: 'full'
   },
   {
@@ -14,10 +14,6 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'videos',
-    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
   },
   {
     path: 'rutinas',
@@ -32,18 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'recover-password',
-    loadChildren: () => import('./pages/recover-password/recover-password.module').then( m => m.RecoverPasswordPageModule)
-  },
-  {
-    path: 'profile-modifications',
-    loadChildren: () => import('./pages/profile-modifications/profile-modifications.module').then( m => m.ProfileModificationsPageModule)
-  },
-  {
-    path: 'change-password',
-    loadChildren: () => import('./pages/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
-  },
-  {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
@@ -56,32 +40,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/progreso/progreso.module').then( m => m.ProgresoPageModule)
   },
   {
-    path: 'configuracion',
-    loadChildren: () => import('./pages/configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
-  },
-  {
     path: 'categorias',
     loadChildren: () => import('./pages/categorias/categorias.module').then( m => m.CategoriasPageModule)
-  },
-  {
-    path: 'cardio',
-    loadChildren: () => import('./pages/cardio/cardio.module').then( m => m.CardioPageModule)
-  },
-  {
-    path: 'fuerza',
-    loadChildren: () => import('./pages/fuerza/fuerza.module').then( m => m.FuerzaPageModule)
-  },
-  {
-    path: 'flexibilidad',
-    loadChildren: () => import('./pages/flexibilidad/flexibilidad.module').then( m => m.FlexibilidadPageModule)
-  },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  },
-  {
-    path: 'datos-personales',
-    loadChildren: () => import('./pages/datos-personales/datos-personales.module').then( m => m.DatosPersonalesPageModule)
   },
   {
     path: 'documentos',
