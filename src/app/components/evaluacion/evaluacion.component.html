@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Realizar Evaluación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-title>Evaluación FranFitness</ion-title>
+<form [formGroup]="evaluacionForm" (ngSubmit)="onSubmit()">
+  <ion-list>
+    <!-- Objetivo -->
+    <ion-item>
+      <ion-label position="floating">Objetivo</ion-label>
+      <ion-input formControlName="objetivo"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('objetivo')?.invalid && evaluacionForm.get('objetivo')?.touched">
+      El objetivo es requerido.
+    </ion-text>
+    <!-- Historial de entrenamiento -->
+    <ion-item>
+      <ion-label position="floating">Historial de Entrenamiento</ion-label>
+      <ion-textarea formControlName="historial"></ion-textarea>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('historial')?.invalid && evaluacionForm.get('historial')?.touched">
+      El historial es requerido.
+    </ion-text>
+    <!-- Conocimiento sobre el entrenamiento -->
+    <ion-item>
+      <ion-label position="floating">Conocimiento sobre el entrenamiento</ion-label>
+      <ion-input formControlName="conocimiento"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('conocimiento')?.invalid && evaluacionForm.get('conocimiento')?.touched">
+      Este campo es requerido.
+    </ion-text>
+    <!-- Frecuencia de entrenamiento -->
+    <ion-item>
+      <ion-label position="floating">Frecuencia (días por semana)</ion-label>
+      <ion-input type="number" formControlName="frecuencia"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('frecuencia')?.invalid && evaluacionForm.get('frecuencia')?.touched">
+      Frecuencia es requerido.
+    </ion-text>
+    <!-- Hora de entrenamiento -->
+    <ion-item>
+      <ion-label position="floating">Hora preferida para entrenar</ion-label>
+      <ion-select formControlName="hora">
+        <ion-select-option value="mañana">Mañana</ion-select-option>
+        <ion-select-option value="tarde">Tarde</ion-select-option>
+        <ion-select-option value="noche">Noche</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('hora') && evaluacionForm.get('hora')!.invalid && evaluacionForm.get('hora')!.touched">
+      Hora es requerido.
+    </ion-text>
+    <!-- Peso -->
+    <ion-item>
+      <ion-label position="floating">Peso (kg)</ion-label>
+      <ion-input type="number" formControlName="peso"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('peso') && evaluacionForm.get('peso')!.invalid && evaluacionForm.get('peso')!.touched">
+      Peso es requerido.
+    </ion-text>
+    <!-- Altura -->
+    <ion-item>
+      <ion-label position="floating">Altura (cm)</ion-label>
+      <ion-input type="number" formControlName="altura"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="evaluacionForm.get('altura') && evaluacionForm.get('altura')!.invalid && evaluacionForm.get('altura')!.touched">
+      Altura es requerido.
+    </ion-text>
+  </ion-list>
+  <!-- Botones para acciones -->
+  <ion-button expand="full" type="submit" color="primary">
+    Guardar Evaluación
+  </ion-button>
+  <ion-button expand="full" color="secondary" (click)="nuevaEvaluacion()">
+    Realizar Nueva Evaluación
+  </ion-button>
+</form>
+<!-- Si hay una evaluación previa -->
+<ion-item *ngIf="evaluacionPrevia">
+  <ion-label>
+    <strong>Evaluación Previa:</strong> {{ evaluacionPrevia | json }}
+  </ion-label>
+</ion-item>
+</ion-content>

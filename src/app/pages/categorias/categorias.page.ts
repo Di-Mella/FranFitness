@@ -6,23 +6,11 @@ import { IonicModule } from '@ionic/angular';
 import { FuerzaComponent } from 'src/app/components/fuerza/fuerza.component';
 import { CardioComponent } from 'src/app/components/cardio/cardio.component';
 import { FlexibilidadComponent } from 'src/app/components/flexibilidad/flexibilidad.component';
+
 @Component({
   selector: 'app-categorias',
   templateUrl: './categorias.page.html',
   styleUrls: ['./categorias.page.scss'],
-})
-@NgModule({
-  declarations: [
-    CategoriasPage,
-    FuerzaComponent,
-    CardioComponent,
-    FlexibilidadComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule
-  ]
 })
 export class CategoriasPage implements OnInit {
 

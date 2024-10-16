@@ -1,36 +1,11 @@
 <ion-card>
-  <ion-card-header>
-    <ion-card-title>Vista General</ion-card-title>
-  </ion-card-header>
-
-  <ion-card-content>
-    <ion-list lines="none">
-      <!-- Nombre del Usuario -->
-      <ion-item>
-        <ion-label>
-          <h2>Nombre</h2>
-          <p>{{ user.name }}</p>
-        </ion-label>
-      </ion-item>
-
-      <!-- Nivel de Progreso -->
-      <ion-item>
-        <ion-label>
-          <h2>Nivel de Progreso</h2>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-progress-bar [value]="user.progress / 100" color="primary"></ion-progress-bar>
-        <ion-label class="ion-text-end">{{ user.progress }}%</ion-label>
-      </ion-item>
-
-      <!-- Última Actividad -->
-      <ion-item>
-        <ion-label>
-          <h2>Última Actividad</h2>
-          <p>{{ user.lastActivity }}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-card-content>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img [src]="avatar" alt="{{ nombre }}">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ nombre }}</h2>
+      <p>{{ email }}</p>
+    </ion-label>
+  </ion-item>
 </ion-card>

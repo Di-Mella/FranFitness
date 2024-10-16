@@ -1,7 +1,64 @@
-<p>
-  layout works!
-</p>
-<!-- layout.component.html -->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu FranFitness</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <!-- Inicio -->
+      <ion-item [routerLink]="['/dashboard']">
+        <ion-icon slot="start" name="play-circle"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-item>
+
+      <!-- Videos -->
+      <ion-item [routerLink]="['/videos']">
+        <ion-icon slot="start" name="radio"></ion-icon>
+        <ion-label>Videos</ion-label>
+      </ion-item>
+
+      <!-- Rutinas -->
+      <ion-item [routerLink]="['/rutinas']">
+        <ion-icon slot="start" name="library"></ion-icon>
+        <ion-label>Rutinas</ion-label>
+      </ion-item>
+
+      <!-- Perfil -->
+      <ion-item [routerLink]="['/perfil']">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-item>
+
+      <!-- Planes de Membresía -->
+      <ion-item [routerLink]="['/membresia']">
+        <ion-icon slot="start" name="card-outline"></ion-icon>
+        <ion-label>Planes de Membresía</ion-label>
+      </ion-item>
+
+      <!-- Progreso -->
+      <ion-item [routerLink]="['/progreso']">
+        <ion-icon slot="start" name="barbell-outline"></ion-icon>
+        <ion-label>Progreso</ion-label>
+      </ion-item>
+
+      <!-- Configuración -->
+      <ion-item [routerLink]="['/configuracion']">
+        <ion-icon slot="start" name="settings-outline"></ion-icon>
+        <ion-label>Configuración</ion-label>
+      </ion-item>
+
+      <!-- Soporte -->
+      <ion-item [routerLink]="['/soporte']">
+        <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+        <ion-label>Soporte</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Main content area -->
+<ion-router-outlet id="main-content"></ion-router-outlet>
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home" [routerLink]="['/dashboard']">
@@ -22,5 +79,4 @@
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
-
 <router-outlet></router-outlet>
