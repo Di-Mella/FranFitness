@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Ejercicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let ejercicio of ejercicios">
+      {{ ejercicio.nombre }}
+      {{ ejercicio.id_ejercicios }}
+    </ion-item>
+  <ion-button expand="full" [routerLink]="['/ejercicios-agregar']">
+    Agregar Nuevo ejercicio
+  </ion-button>
+  </ion-list>
+</ion-content>

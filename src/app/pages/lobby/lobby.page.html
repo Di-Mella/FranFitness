@@ -1,0 +1,43 @@
+<app-layout></app-layout>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hola, {{name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+<ion-card-header>
+<ion-card-title>Mi entrenamiento</ion-card-title>
+</ion-card-header>
+<ion-card-content>
+Progreso 
+<p>{{ progress * 100 | number: '1.0-0' }}%</p>                                         
+<ion-progress-bar [value]="progress" color='primary'></ion-progress-bar>
+</ion-card-content>
+ </ion-card>
+  <label >Proximo entrenamiento</label>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Acceder a mi entrenamiento</ion-card-title>
+      <ion-card-subtitle>{{user.name}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button fill="clear" style="display: flex; align-items: center;"  (click)="ingresar()">
+        <ion-icon slot="end" name="arrow-forward-circle-outline" style="font-size: 20px; margin-right: 5px;"></ion-icon>
+        Acceder
+      </ion-button>
+      <ion-button fill="clear" style="display: flex; align-items: center;"  (click)="ingresar2()">
+        <ion-icon slot="end" name="arrow-forward-circle-outline" style="font-size: 20px; margin-right: 5px;"></ion-icon>
+        Acceder a ejercicios
+      </ion-button>
+      <ion-button fill="clear" style="display: flex; align-items: center;"  (click)="ingresar3()">
+        <ion-icon slot="end" name="arrow-forward-circle-outline" style="font-size: 20px; margin-right: 5px;"></ion-icon>
+        Acceder a generos
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

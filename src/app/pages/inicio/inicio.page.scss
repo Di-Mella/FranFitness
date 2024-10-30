@@ -10,15 +10,17 @@
     margin-top: 50px;
   }
   
-  .logo {
-    width: 200px;
-    height: auto;
-  }
-  
   .button-container {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
+  ion-content {
+    --background: url('/assets/images/logo.jpeg') no-repeat center center / cover;
+  }
   
+  .button-container {
+    width: 100%; /* Ajusta el ancho del botón */
+    margin-bottom: 20px; /* Espacio inferior para el botón */
+  }

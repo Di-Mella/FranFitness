@@ -6,7 +6,6 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <form (ngSubmit)="registerUser()" #registerForm="ngForm">
     <ion-item>
@@ -18,9 +17,9 @@
       <ion-input type="password" required [(ngModel)]="user.password" name="password"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
       <ion-input type="password" required [(ngModel)]="user.confirmPassword" name="confirmPassword"></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit" [disabled]="!registerForm.form.valid">Registrarse</ion-button>
+    <ion-button expand="full" type="submit" [disabled]="!registerForm.form.valid" [routerLink]="['/login']" >Registrarse</ion-button>
   </form>
 </ion-content>

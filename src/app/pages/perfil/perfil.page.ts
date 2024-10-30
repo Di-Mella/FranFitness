@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PerfilPage implements OnInit {
   user = {
-    name: 'Juan Pérez',
+    name: 'Diego, Mella',
     progress: 75, // Porcentaje de progreso
     lastActivity: 'Entrenamiento de fuerza - 2 horas'
   };

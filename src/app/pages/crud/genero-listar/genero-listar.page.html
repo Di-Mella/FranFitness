@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Géneros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let genero of generos">
+      {{ genero.tipo_genero }}
+    </ion-item>
+  <ion-button expand="full" routerLink="/genero-agregar">
+    Agregar Nuevo Género
+  </ion-button>
+  </ion-list>
+</ion-content>

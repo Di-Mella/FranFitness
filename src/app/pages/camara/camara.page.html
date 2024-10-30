@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>camara</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="takePicture()">Tomar Foto</ion-button>
+  <img *ngIf="imagen" [src]="imagen" alt="Sin imagen" style="height: 250px;width: 250px;"/>
+  <ion-item >
+    <ion-button color="success" fill="full" (click)="ingresar()"> 
+      Ingresar 
+    </ion-button>
+  </ion-item>
+  <ion-card id="2">
+    <ion-card-header>
+      <ion-card-title>Acceder a mi entrenamiento</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button color="success" fill="full" style="display: flex; align-items: center;" (click)="ingresar()" >
+        <ion-icon slot="end" name="arrow-forward-circle-outline" style="font-size: 20px; margin-right: 5px;"></ion-icon>
+        Acceder
+      </ion-button>
+      <ion-item >
+        <ion-button color="success" fill="full" (click)="ingresar()"> 
+          Ingresar 
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

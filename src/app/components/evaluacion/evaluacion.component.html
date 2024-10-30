@@ -57,7 +57,7 @@
     <!-- Peso -->
     <ion-item>
       <ion-label position="floating">Peso (kg)</ion-label>
-      <ion-input type="number" formControlName="peso"></ion-input>
+      <ion-input type="number" formControlName="peso">___</ion-input>
     </ion-item>
     <ion-text color="danger" *ngIf="evaluacionForm.get('peso') && evaluacionForm.get('peso')!.invalid && evaluacionForm.get('peso')!.touched">
       Peso es requerido.
