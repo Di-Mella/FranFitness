@@ -7,14 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { DatospersonalesPageRoutingModule } from './datospersonales-routing.module';
 
 import { DatospersonalesPage } from './datospersonales.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DatospersonalesPageRoutingModule
+    DatospersonalesPageRoutingModule,
+    SharedModule
   ],
-  declarations: [DatospersonalesPage]
+  declarations: [DatospersonalesPage],
+  
 })
 export class DatospersonalesPageModule {}

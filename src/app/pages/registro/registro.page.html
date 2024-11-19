@@ -1,25 +1,12 @@
-<ion-header [translucent]="true">
+<app-layout></app-layout>
+<ion-header>
   <ion-toolbar>
-    <ion-title>Registro</ion-title>
-    <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-    </ion-buttons>
+    <ion-title>Registro de Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-  <form (ngSubmit)="registerUser()" #registerForm="ngForm">
-    <ion-item>
-      <ion-label position="floating">Correo Electronico</ion-label>
-      <ion-input type="email" required [(ngModel)]="user.email" name="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required [(ngModel)]="user.password" name="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Confirmar Contraseña</ion-label>
-      <ion-input type="password" required [(ngModel)]="user.confirmPassword" name="confirmPassword"></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit" [disabled]="!registerForm.form.valid" [routerLink]="['/login']" >Registrarse</ion-button>
-  </form>
+
+<ion-content>
+<app-tabs></app-tabs>
+
+
 </ion-content>

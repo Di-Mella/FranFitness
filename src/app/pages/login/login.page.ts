@@ -37,7 +37,7 @@ export class LoginPage implements OnInit {
     console.log('Stored Password:', storedPassword);
     if (storedUsuario == f.nombre && storedPassword == f.password) {
         console.log('Ingresado');
-      this.navCtrl.navigateRoot('/dashboard')
+      this.navCtrl.navigateRoot('/lobby')
     } else {
         const alert = await this.alertController.create({
             message: 'Credenciales incorrectas. Por favor, inténtalo de nuevo.',

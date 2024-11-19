@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Generos } from 'src/app/class/generos';
 import { ServiceBDService } from 'src/app/services/service-bd.service';
 
@@ -20,7 +20,7 @@ export class GeneroListarPage implements OnInit {
     })
   }
   ngOnInit() {
-    //this.db.getGeneros();
+    this.db.getGeneros();
     this.db.fetchGenero().subscribe(data=>{
       this.generos = data;
     })

@@ -15,6 +15,7 @@ import { EjerciciosListarPage } from './ejercicios-listar.page';
     IonicModule,
     EjerciciosListarPageRoutingModule
   ],
-  declarations: [EjerciciosListarPage]
+  declarations: [EjerciciosListarPage],
+  
 })
 export class EjerciciosListarPageModule {}

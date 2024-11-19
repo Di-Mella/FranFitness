@@ -1,13 +1,29 @@
+<app-layout></app-layout>
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Progreso</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <app-tabs></app-tabs>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Progreso</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registra tus recuerdos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Captura momentos especiales de tu progreso y guárdalos como recuerdos.
+    </ion-card-content>
+    <ion-button expand="block" color="primary" (click)="goToCamera()">
+      Ir a la cámara
+    </ion-button>
+  </ion-card>
 </ion-content>

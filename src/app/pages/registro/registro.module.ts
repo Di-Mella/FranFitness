@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistroPage } from './registro.page';
 import { IonicModule } from '@ionic/angular';
 import { RegistroPageRoutingModule } from './registro-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [RegistroPage],
@@ -12,8 +13,10 @@ import { RegistroPageRoutingModule } from './registro-routing.module';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    RegistroPageRoutingModule
+    RegistroPageRoutingModule,
+    SharedModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RegistroPageModule {}
 

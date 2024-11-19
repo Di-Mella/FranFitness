@@ -470,6 +470,11 @@ deleteRutina(id_rutina: number){
 }
 
 // Tabla Usuarios
+async getUserByUsername(username: string) {
+  const query = 'SELECT * FROM users WHERE username = ?';
+  const data = await this.database.executeSql(query, [username]);
+  return data.rows.length > 0 ? data.rows.item(0) : null;
+}
 getUsuarios(){
   return this.database.executeSql(`
     SELECT usuarios.*, genero.tipo_genero, rol_usuarios.nombrerol

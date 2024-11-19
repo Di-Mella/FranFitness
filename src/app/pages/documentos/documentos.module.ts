@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { DocumentosPageRoutingModule } from './documentos-routing.module';
 
 import { DocumentosPage } from './documentos.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DocumentosPageRoutingModule
+    DocumentosPageRoutingModule,
+    SharedModule
   ],
   declarations: [DocumentosPage]
 })

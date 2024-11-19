@@ -7,7 +7,7 @@ import { RoleGuard } from './guards/role-guard.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'lobby',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
